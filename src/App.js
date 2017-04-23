@@ -11,7 +11,7 @@ class App extends React.Component {
       contact: {}
     };
   }
-  componentDidMount() {
+  loadContacts() {
     // 1) make web request
     // 2) convert response to object
     // I have no idea when the web request will be done so I need a promise
@@ -30,7 +30,10 @@ class App extends React.Component {
         contacts: data
       });
     });
+  }
+  componentDidMount() {
 
+    this.loadContacts();
     const anotherConvertToJsonPromise = getOneContact(1);
     anotherConvertToJsonPromise.then((data) => {
       this.setState({
@@ -51,8 +54,8 @@ class App extends React.Component {
               name: "Dale Cooper",
               occupation: "FBI Agent"
             };
-            createContact(contact).then(function (data) {
-
+            createContact(contact).then( (data) => {
+              this.loadContacts();
             });
           }
         }> Create Contact </button>  
