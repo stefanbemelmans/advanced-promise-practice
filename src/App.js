@@ -1,6 +1,7 @@
 import React from "react";
 import "whatwg-fetch";
 import getOneContact from "./modules/get-one-contact";
+import createContact from "./modules/create-contact";
 
 class App extends React.Component {
   constructor() {
