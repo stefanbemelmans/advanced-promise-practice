@@ -2,7 +2,7 @@ import React from "react";
 import "whatwg-fetch";
 import getAllContacts from "./modules/get-all-contacts";
 import getOneContact from "./modules/get-one-contact";
-
+import createContact from "./modules/get-one-contact";
 class App extends React.Component {
   constructor() {
     super();
@@ -31,13 +31,30 @@ class App extends React.Component {
       });
     });
 
-    const anotherConvertToJsonPromise= getOneContact(1);
+    const anotherConvertToJsonPromise = getOneContact(1);
+    anotherConvertToJsonPromise.then((data) => {
+      this.setState({
+        contact: data
+      });
+    });
+
   }
   render() {
     return (
       <div className="App">
         <h1>This better say 5: {this.state.contacts.length} </h1>
         <h1>This better say Dale Cooper: {this.state.contact.name} </h1>
+        <h1>When I click this button, more contacts should show up</h1>
+        <button onClick={
+          () => {
+            createContact({
+              name: "Dale Cooper",
+              occupation: "FBI Agent"
+            }).then(function (data) {
+
+            });
+          }
+        }> Create Contact </button>  
       </div>
     );
   }
