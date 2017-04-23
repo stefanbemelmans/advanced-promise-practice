@@ -2,7 +2,7 @@ import React from "react";
 import "whatwg-fetch";
 import getAllContacts from "./modules/get-all-contacts";
 import getOneContact from "./modules/get-one-contact";
-import createContact from "./modules/get-one-contact";
+import createContact from "./modules/create-contact";
 class App extends React.Component {
   constructor() {
     super();
@@ -47,10 +47,11 @@ class App extends React.Component {
         <h1>When I click this button, more contacts should show up</h1>
         <button onClick={
           () => {
-            createContact({
+            const contact = {
               name: "Dale Cooper",
               occupation: "FBI Agent"
-            }).then(function (data) {
+            };
+            createContact(contact).then(function (data) {
 
             });
           }
