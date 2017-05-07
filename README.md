@@ -1,5 +1,5 @@
 ### Setup
-  * Fork, clone, yarn install, yarn install
+  * Fork, clone, yarn install, yarn start
 ### Do
   * Look at `src/modules/contacts` as your reference guide on how to use promises and fetch
   * Fill in the code for `src/modules/comments` using contacts as an example
