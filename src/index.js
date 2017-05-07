@@ -1,14 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import "./index.css";
-import users from "./users";
+import contacts from "./modules/contacts";
+import comments from "./modules/comments";
 
 
-function render() {
-  ReactDOM.render(
-    <App users={users} />,
-    document.getElementById("root")
-  );
-}
-render();

@@ -6,7 +6,7 @@
       "author": "typicode"
     }
   ],
-   "contacts": [
+  "contacts": [
     {
       "_id": 1,
       "name": "Dale Cooper",
@@ -41,7 +41,12 @@
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
+      "body": "ACA is great!",
+      "postId": 1
+    },
+    {
+      "id": 1,
+      "body": "I love promises!",
       "postId": 1
     }
   ],

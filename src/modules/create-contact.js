@@ -1,8 +1,6 @@
-import "whatwg-fetch";
-
 function createContact(contact) {
   const promise = fetch("/contacts", {
-    method: "get",
+    method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
