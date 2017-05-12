@@ -15,7 +15,7 @@ loadAllComments();
 
 
 
-window.createComment = function () {
+window.makeComment = function () {
  
 };
 
