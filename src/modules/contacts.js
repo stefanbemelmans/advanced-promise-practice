@@ -24,7 +24,8 @@ loadAllContacts();
 fetch("/contacts").then(function (response) {
   return response.json();
 }).then(function (data) {
-  // do something with data
+  document.getElementById("numberOfContacts2").innerHTML = data.length;
+  
   console.log(data);
 });
 
