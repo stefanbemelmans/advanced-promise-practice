@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.14.0",
-    "eslint-plugin-babel": "^4.0.1",
-    "eslint-plugin-react": "^6.9.0",
-    "react-scripts": "0.7.0"
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.5.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-react": "^7.2.1",
+    "react-scripts": "1.0.11"
   },
   "dependencies": {
     "foreman": "^2.0.0",
