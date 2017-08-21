@@ -26,7 +26,14 @@ loadAllComments();
 
 // 3) We can use promises from other modules
 
-
+fetch("/comments").then(function (response) {
+  return response.json();
+}).then(function (data) {
+  // do something with data
+  document.getElementById("numberOfComments2").innerHTML = data.length;
+  
+  console.log(data);
+});
 
 window.makeComment = function () {
  
