@@ -1,6 +1,5 @@
 import getOneComment from "./get-one-comment";
 import createComment from "./create-comment";
-import 
 
 function theWebRequestIsDone(response) {
   console.log("Contact response",response);
@@ -35,7 +34,16 @@ fetch("/comments").then(function (response) {
   console.log(data);
 });
 
+getOneComment(1).then(function (data) {
+  document.getElementById("firstComment").innerHTML = data.body;
+});
+
 window.makeComment = function () {
- 
+  createComment({
+    body: "Hey Y'all!"
+
+  }).then(function () {
+    loadAllComments();
+  });
 };
 
